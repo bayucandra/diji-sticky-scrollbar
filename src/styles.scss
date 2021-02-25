@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+
+  margin-top: 20vh;
+  margin-bottom: 200vh;
+}
+
+#app {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    position: relative;
+    width: auto;
+    min-height: 78px;
+    
+    /* Grey Scale / 00 */
+    
+    background: #000000;
+    border-radius: 12px;
+
+    .icon {
+      flex: none;
+      width: 47px;
+      height: 47px;
+      margin: 0 0 0 64px;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAIAAAD8RQT7AAAAA3NCSVQICAjb4U/gAAABpUlEQVRYCe2Wba2EMBBFsYAFLGABC1jAAhawgAUsYAELWMDCeyeZpJm03dJJ4H0ksz82Q/d2euZOW7Zp/OMOuAPugDvgDvxPB/Z9/6r4zPM8TVOhxHEcSbNtW0Fz/1MljQBf1/WJ6RdohClrQKDBRWTruooTx3HwOAzDvTEoTN4IDd8pUKBp2xYLz/Mkedd1iAGqQklp0kZQFoUGjhBEykBDTliRMSI+8f0YjSTq+56KAwoBj3oNTSMxNWA8MtzSylIcdSqqWM+UNTSQFmsaZtEpoU97qnPGcT0NMyOxXimiWZZFuBmPlyw8RwvoctNZsg+CPbJVRRbRsNuQaUGaLTNiomH3BBQJMhmbBmjZyDiUFXwcNNHIidVAjKSpZceQ2bB/JYuJhikahThLk/LVjphoqPUP0aSdqi26UmfyRg5OsMdw5b9BE70izEfmlqnem/R42262WxQElTTsGK6y0CMC8832CA3niNtMrhBN87wxqTd6vUIc/kzVFGzQRJ0qEISf3kKxekO/yq9Vgw1ZaaU3HOZ3ObJwPugOuAPugDvgDvy4A9/YbPaaaIdSLQAAAABJRU5ErkJggg==')
+    }//.icon
+
+    .separator {
+      flex: none;
+      display: block;
+      width: 1px;
+      height: 24px;
+
+      background: #FFFFFF;
+      opacity: 0.25;
+
+      /* Inside Auto Layout */
+
+      flex: none;
+      flex-grow: 0;
+      margin-left: 38px;
+    }//.separator
+
+    .menu {
+
+      &__wrapper {
+        flex: 1 0 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }//&__wrapper
+
+      &__item {
+        margin: 0 0 0 32px;
+        padding: 8px 0;
+        font-family: Italian Plate No2 Expanded;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFF;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+          color: rgba(255,255,255, 0.5);
+        }
+      }//&__item
+
+    }//.menu
+
+
+    &--is-sticky {
+      position: fixed;
+      top: 0;
+      left:0;
+      right:0;
+    }
+  }//.header
+}//#app
