@@ -28,11 +28,12 @@ setInterval(function () {
 
 window.addEventListener("scroll", function (e) {
   try {
-    var header_el = document.querySelector("#app .header");
-    if (window.scrollY > 200) {
-      header_el.className = "header header--is-sticky";
+    let header_el = document.querySelector("#app .header");
+    let header_offset_top = document.querySelector("#app").offsetTop;
+    if (window.pageYOffset > header_offset_top) {
+      header_el.classList.add("header--is-sticky");
     } else {
-      header_el.className = "header";
+      header_el.classList.remove("header--is-sticky");
     }
   } catch (e) {
     console.log("unknown");
@@ -41,6 +42,9 @@ window.addEventListener("scroll", function (e) {
 
 function refreshMenu() {
   var menu_wrapper_el = document.querySelector("#app .menu__wrapper");
+  if (menu_wrapper_el.childElementCount === menus.length) {
+    return;
+  }
   menu_wrapper_el.innerHTML = "";
   for (var i = 0; i < menus.length; i++) {
     var menu_item = document.createElement("div");
